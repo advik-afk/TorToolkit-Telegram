@@ -1,5 +1,5 @@
 # Edit
-Edit [this](https://github.com/advik-afk/TorToolkit-Telegram/blob/0576e895083e1fe2915c072ee42cc9ab4a14f770/tortoolkit/consts/ExecVarsSample.py#L14) with your own before deploying!
+Edit [this](https://github.com/advik-afk/TorToolkit-Telegram/edit/heroku/tortoolkit/consts/ExecVarsSample.py#L14) with your own before deploying!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/advik-afk/TorToolkit-Telegram/tree/heroku)
 # WebUI
