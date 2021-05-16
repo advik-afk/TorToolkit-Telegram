@@ -196,7 +196,7 @@ async def handle_leech_command(e):
                 [KeyboardButtonCallback("Extract from ZIP.[Toggle]", data=f"leechzipex toggleex {tsp}")]
         )
         
-        conf_mes = await e.reply("<b>First click if you want to zip the contents or extract as an archive (only one will work at a time) then. </b>\n<b>Choose where to uploadyour files:- </b>\nThe files will be uploaded to default destination after 60 sec of no action by user.",parse_mode="html",buttons=buts)
+        conf_mes = await e.reply("<b>First click if you want to zip the contents or extract as an archive (only one will work at a time) then. </b>\n<b>Choose where to upload your files:- </b>\nThe files will be uploaded to default destination after 60 sec of no action by user.",parse_mode="html",buttons=buts)
         
         # zip check in background
         ziplist = await get_zip_choice(e,tsp)
@@ -367,7 +367,7 @@ async def handle_settings_cb(e):
     if await is_admin(e.client,e.sender_id,e.chat_id):
         await handle_setting_callback(e)
     else:
-        await e.answer("⚠️ WARN ⚠️ Dont Touch Admin Settings.",alert=True)
+        await e.answer("⚠️WARN⚠️ Dont Touch Admin Settings.",alert=True)
 
 async def handle_upcancel_cb(e):
     db = upload_db
@@ -413,7 +413,7 @@ async def callback_handler_canc(e):
         torlog.info(f"Hashid :- {hashid}")
         
         await cancel_torrent(hashid, is_aria)
-        await e.answer("The torrent has been cancled in ADMIN MODE XD ;)",alert=True)
+        await e.answer("The torrent has been cancelled in ADMIN MODE XD ;)",alert=True)
     else:
         await e.answer("You can cancel only your torrents ;)", alert=True)
 
@@ -469,13 +469,13 @@ async def handle_pincode_cb(e):
         db = tor_db
         passw = db.get_password(data[1])
         if isinstance(passw,bool):
-            await e.answer("torrent expired download has been started now.")
+            await e.answer("Torrent expired download has been started now.")
         else:
             await e.answer(f"Your Pincode if \"{passw}\"",alert=True)
 
         
     else:
-        await e.answer("Its not you torrent.",alert=True)
+        await e.answer("Its not your torrent.",alert=True)
 
 async def upload_document_f(message):
     imsegd = await message.reply(
@@ -617,7 +617,7 @@ async def about_me(message):
         "<b>Name</b>: <code>TorToolkit</code>\n"
         f"<b>Version</b>: <code>{__version__}</code>\n"
         f"<b>Telethon Version</b>: {telever}\n"
-        "<b>Created By</b>: @yaknight\n\n"
+        "<b>Created By</b>: @Zero_The_Kamisama\n\n"
         "<u>Currents Configs:-</u>\n"
         "<b>Torrent Download Engine:-</b> <code>qBittorrent [4.3.0 fix active]</code> \n"
         "<b>Direct Link Download Engine:-</b> <code>aria2</code> \n"
@@ -629,13 +629,13 @@ async def about_me(message):
         f"<b>Rclone Mod :- </b> <code>{rclone_m}</code> \n"
         f"<b>User Caps(Limits) :- </b> <code>In-progress</code> \n"
         "\n"
-        f"<b>Latest {__version__} Changelog :- </b> Improved the YTDL error reporting.\n"
-        "Fixed a size bug in YTDL.\n"
-        "New /usettings menu for user settings.\n"
-        "Custom thumbnail Support.\n"
-        "User choice force documents.\n"
-        "Disable thumbnail also added.\n"
-        "You can now load custom rclone drives but its not yet implement to transfer to your drive. WIP \n"
+        f"<b>Latest {__version__} Changelog :- </b> *Improved the YTDL error reporting.\n"
+        "*Fixed a size bug in YTDL.\n"
+        "*New /usettings menu for user settings.\n"
+        "*Custom thumbnail Support.\n"
+        "*User choice force documents.\n"
+        "*Disable thumbnail also added.\n"
+        "*You can now load custom rclone drives but its not yet implement to transfer to your drive. WIP \n"
     )
 
     await message.reply(msg,parse_mode="html")
