@@ -1,7 +1,7 @@
 # Edit
-Edit [this](https://github.com/devillD/TorToolkit-Telegram/blob/0576e895083e1fe2915c072ee42cc9ab4a14f770/tortoolkit/consts/ExecVarsSample.py#L14) with your own before deploying!
+Edit [this](https://github.com/advik-afk/TorToolkit-Telegram/blob/0576e895083e1fe2915c072ee42cc9ab4a14f770/tortoolkit/consts/ExecVarsSample.py#L14) with your own before deploying!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/devillD/TorToolkit-Telegram/tree/heroku)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/advik-afk/TorToolkit-Telegram/tree/heroku)
 # WebUI
 WebUI for selecting individual torrent file
 
@@ -9,14 +9,11 @@ WebUI for selecting individual torrent file
 So basically Tortoolkit is aimed to be most versatile torrent leecher and Youtube-DL bot for telegram. This bot is highly customizeable and to customize this bot you dont need to restart the bot everytime. 
 The bot gets started with minimum variables and others can be set as and when needed using the /settings
 
-## Working Demo Group:- [Group Link](https://t.me/link2drive)
-
 ## As This is a first release of this project the installation is a bit lengthy but takes less than 10 mins.
 ## In subsequent releases i will try to make one click install 
 
 
 ## Installing
-### [Demo video for direct clone and run](https://youtu.be/HYjG4-VfxXs)
 ### Direct Clone and Run
 Run the following commands. (Following commands can be used to setup the vps from scratch)
    
