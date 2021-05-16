@@ -15,7 +15,7 @@ from PIL import Image
 torlog = logging.getLogger(__name__)
 #logging.getLogger("telethon").setLevel(logging.DEBUG)
 
-TIMEOUT_SEC = 60
+TIMEOUT_SEC = 120
 
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
@@ -24,7 +24,7 @@ no = "❌"
 yes = "✅"
 # Central object is not used its Acknowledged 
 tordb = TorToolkitDB()
-header =  '<b>**TorToolKit** by <a href="https://github.com/yash-dk">YashDK</a></b>\n<u>USER SETTINGS MENU - v1</u>'
+header =  '<b>TorToolKit</b>\n<u>USER SETTINGS MENU - v1</u>'
 async def handle_user_setting_callback(e):
     db = tordb
     sender_id = str(e.sender_id)
@@ -37,7 +37,7 @@ async def handle_user_setting_callback(e):
     
     if cmd[-1] != sender_id:
         print("Sender id",sender_id," - - ",cmd[-1])
-        await e.answer("Dont touch sender dosent match.",alert=True)
+        await e.answer("Don't touch sender doesn't match.",alert=True)
         #await e.delete()
         return
     if cmd[1] == "mycmd":
