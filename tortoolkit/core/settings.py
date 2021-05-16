@@ -13,7 +13,7 @@ import time,os,configparser,logging,traceback
 torlog = logging.getLogger(__name__)
 #logging.getLogger("telethon").setLevel(logging.DEBUG)
 
-TIMEOUT_SEC = 60
+TIMEOUT_SEC = 120
 
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
@@ -111,7 +111,7 @@ async def handle_setting_callback(e):
         mmes = await e.get_message()
         await handle_settings(mmes,True,session_id=session_id)
     elif cmd[1] == "rcloneconfig":
-        await e.answer("Sned the rclone config file which you have generated.",alert=True)
+        await e.answer("Send the rclone config file which you have generated.",alert=True)
         mmes = await e.get_message()
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back",buttons=None)
         val = await get_value(e,True)
@@ -130,12 +130,12 @@ async def handle_setting_callback(e):
                 # JIC is user does manual stuff
                 await e.client.edit_permissions(e.chat_id,send_messages=False)
             except:
-                await e.answer("An error occured try again if dosent work report this issue")
+                await e.answer("An error occured try again if doesn't work report this issue")
         else:
             try:
                 await e.client.edit_permissions(e.chat_id,send_messages=True)
             except:
-                await e.answer("An error occured try again if dosent work report this issue")
+                await e.answer("An error occured try again if doesn't work report this issue")
             val = False
         
         db.set_variable("LOCKED_USERS",val)
